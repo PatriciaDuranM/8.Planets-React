@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import './normalize.css';
+import { FONT_FAMILY } from './FontsStyles';
+import { COLORS } from './Colors';
 export const GlobalStyles = createGlobalStyle`
     *,
     *::after,
@@ -22,6 +24,13 @@ export const GlobalStyles = createGlobalStyle`
     a {
         text-decoration: none;
         color: inherit;
+    }
+
+    body{
+        margin:0;
+        font-family:${FONT_FAMILY.spartan};
+        background-color:${COLORS.darkblue};
+        background-image: url('/assets/images/background-stars.svg');
     }
 
 `;

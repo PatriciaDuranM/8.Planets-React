@@ -9,3 +9,8 @@ export const FONT_WEIGHT = {
 	extrabold: 800,
 	black: 900
 };
+
+export const FONT_FAMILY = {
+	antonio: '"Antonio", serif',
+	spartan: '"League Spartan", serif'
+};
