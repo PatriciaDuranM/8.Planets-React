@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { PLANETS_INFO } from '../../constants/planets-data';
 import {
+	StyledArrow,
 	StyledBar,
 	StyledBox,
 	StyledBurgerIcon,
@@ -16,14 +17,16 @@ const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 	return (
 		<StyledBar>
-			<Link to='/'>
-				<StyledH1>THE PLANETS</StyledH1>
-			</Link>
-			<StyledBurgerIcon
-				onClick={() => setMenuOpen(!menuOpen)}
-				src='public/assets/images/icon-hamburger.svg'
-				alt='Menu'
-			/>
+			<StyledBox>
+				<Link to='/'>
+					<StyledH1>THE PLANETS</StyledH1>
+				</Link>
+				<StyledBurgerIcon
+					onClick={() => setMenuOpen(!menuOpen)}
+					src='public/assets/images/icon-hamburger.svg'
+					alt='Menu'
+				/>
+			</StyledBox>
 
 			<nav>
 				<StyledMenu menuOpen={menuOpen}>
@@ -33,7 +36,7 @@ const Header = () => {
 								<StyledDot $color={planet.color} />
 								{planet.name.toUpperCase()}
 							</StyledNavLink>
-							<img src='public/assets/images/icon-chevron.svg' alt='' />
+							<StyledArrow src='public/assets/images/icon-chevron.svg' alt='' />
 						</StyledItem>
 					))}
 				</StyledMenu>
