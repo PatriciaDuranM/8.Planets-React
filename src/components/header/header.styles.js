@@ -6,6 +6,7 @@ import { COLORS } from '../../styles/Colors';
 const StyledBar = styled.div`
 	display: flex;
 	flex-direction: row;
+	width: 100%;
 	justify-content: space-between;
 	align-items: center;
 	height: 4.25rem;
@@ -13,6 +14,14 @@ const StyledBar = styled.div`
 	padding-block: 1rem;
 	padding-inline: 1.5rem;
 	color: white;
+`;
+
+const StyledBox = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	align-items: center;
 `;
 
 const StyledH1 = styled.h1`
@@ -29,15 +38,18 @@ const StyledBurgerIcon = styled.img`
 	}
 `;
 const StyledMenu = styled.ul`
-	display: flex;
+	display: ${({ menuOpen }) => (menuOpen ? 'flex' : 'none')};
 	flex-direction: column;
 	width: 375px;
 	position: absolute;
 	left: 0px;
 	top: 4.25rem;
+	background-color: ${COLORS.darkblue};
 
 	@media screen and (width>768px) {
-		display: none;
+		position: static;
+		display: flex;
+		flex-direction: row;
 	}
 `;
 
@@ -65,7 +77,7 @@ const StyledNavLink = styled(NavLink)`
 const StyledDot = styled.div`
 	width: 20px;
 	height: 20px;
-	color: ${({ $color }) => $color};
+	background-color: ${({ $color }) => $color};
 	border-radius: 50%;
 `;
 
@@ -76,5 +88,6 @@ export {
 	StyledItem,
 	StyledNavLink,
 	StyledDot,
-	StyledBar
+	StyledBar,
+	StyledBox
 };

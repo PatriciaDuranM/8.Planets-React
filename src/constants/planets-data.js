@@ -1,7 +1,10 @@
+import { v4 } from 'uuid';
 import { COLORS_PLANETS } from '../styles/Colors';
 
 export const PLANETS_INFO = [
 	{
+		link: '/mercury',
+		id: v4(),
 		name: 'Mercury',
 		color: COLORS_PLANETS.mercurio,
 		owText:
@@ -28,6 +31,8 @@ export const PLANETS_INFO = [
 	},
 
 	{
+		id: v4(),
+		link: '/venus',
 		name: 'Venus',
 		color: COLORS_PLANETS.venus,
 		owText:
@@ -51,6 +56,8 @@ export const PLANETS_INFO = [
 		temperature: '471°c'
 	},
 	{
+		link: '/earth',
+		id: v4(),
 		name: 'Earth',
 		color: COLORS_PLANETS.tierra,
 		owText:
@@ -74,6 +81,8 @@ export const PLANETS_INFO = [
 		temperature: '16°c'
 	},
 	{
+		link: '/mars',
+		id: v4(),
 		name: 'Mars',
 		color: COLORS_PLANETS.marte,
 		owText:
@@ -97,6 +106,8 @@ export const PLANETS_INFO = [
 	},
 
 	{
+		link: '/jupiter',
+		id: v4(),
 		name: 'Jupiter',
 		color: COLORS_PLANETS.jupiter,
 		owText:
@@ -121,6 +132,8 @@ export const PLANETS_INFO = [
 	},
 
 	{
+		link: '/saturn',
+		id: v4(),
 		name: 'Saturn',
 		color: COLORS_PLANETS.saturno,
 		owText:
@@ -144,6 +157,8 @@ export const PLANETS_INFO = [
 		temperature: '-138°c'
 	},
 	{
+		link: '/uranus',
+		id: v4(),
 		name: 'Uranus',
 		color: COLORS_PLANETS.urano,
 		owText:
@@ -167,6 +182,8 @@ export const PLANETS_INFO = [
 		temperature: '-195°c'
 	},
 	{
+		link: '/neptune',
+		id: v4(),
 		name: 'Neptune',
 		color: COLORS_PLANETS.neptuno,
 		owText:
