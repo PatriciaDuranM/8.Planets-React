@@ -12,6 +12,17 @@ const StyledBox = styled.div`
 	flex-direction: column;
 	gap: 16px;
 	align-items: center;
+	grid-column: 1 / 2;
+	grid-row: 3 / 4;
+
+	@media screen and (width>768px) {
+		grid-column: 1 / 3;
+		grid-row: 2 / 3;
+	}
+	@media screen and (width>1024px) {
+		grid-column: 6 / 9;
+		grid-row: 1 / 2;
+	}
 `;
 const StyledText = styled.div`
 	color: white;
