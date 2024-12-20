@@ -11,7 +11,7 @@ const Router = () => {
 				<Route
 					key={planet.id}
 					path={planet.link}
-					element={<PlanetPage />}
+					element={<PlanetPage planet={planet} />}
 				></Route>
 			))}
 		</Routes>

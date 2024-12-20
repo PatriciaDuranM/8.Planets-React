@@ -29,7 +29,7 @@ const Header = () => {
 			</StyledBox>
 
 			<nav>
-				<StyledMenu menuOpen={menuOpen}>
+				<StyledMenu $menuOpen={menuOpen}>
 					{PLANETS_INFO.map(planet => (
 						<StyledItem key={planet.id}>
 							<StyledNavLink to={planet.link}>

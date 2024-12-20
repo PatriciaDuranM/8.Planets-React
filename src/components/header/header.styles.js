@@ -55,7 +55,7 @@ const StyledBurgerIcon = styled.img`
 	}
 `;
 const StyledMenu = styled.ul`
-	display: ${({ menuOpen }) => (menuOpen ? 'flex' : 'none')};
+	display: ${({ $menuOpen }) => ($menuOpen ? 'flex' : 'none')};
 	flex-direction: column;
 	width: 100%;
 	position: absolute;

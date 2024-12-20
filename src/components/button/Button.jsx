@@ -1,16 +1,33 @@
 import { StyledBoxButton, StyledButton } from './button.styles';
 
-const Button = ({ activeButton, setActiveButton }) => {
+const Button = ({ planet, activeButton, setActiveButton }) => {
 	return (
 		<StyledBoxButton>
 			<StyledButton
-				state='overview'
+				$activeButton={activeButton}
+				$planet={planet}
+				$state='overview'
 				onClick={() => setActiveButton('overview')}
 			>
 				OVERVIEW
 			</StyledButton>
-			<StyledButton>STRUCTURE</StyledButton>
-			<StyledButton> SURFACE</StyledButton>
+			<StyledButton
+				$activeButton={activeButton}
+				$planet={planet}
+				$state='structure'
+				onClick={() => setActiveButton('structure')}
+			>
+				STRUCTURE
+			</StyledButton>
+			<StyledButton
+				$activeButton={activeButton}
+				$planet={planet}
+				$state='surface'
+				onClick={() => setActiveButton('surface')}
+			>
+				{' '}
+				SURFACE
+			</StyledButton>
 		</StyledBoxButton>
 	);
 };

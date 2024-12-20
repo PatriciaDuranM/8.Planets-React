@@ -7,14 +7,17 @@ import {
 	StyledWiki
 } from './infoPlanet.styles';
 
-const InfoPlanet = () => {
+const InfoPlanet = ({ planet }) => {
 	return (
 		<StyledBox>
-			<StyledTitle>NAME PLANET</StyledTitle>
-			<StyledText>TEXT DEL PLANETA </StyledText>
+			<StyledTitle>{planet.name}</StyledTitle>
+			<StyledText>{planet.owText} </StyledText>
 			<StyledLink>
 				<StyledSource>
-					Source : <StyledWiki>Wikipedia</StyledWiki>
+					Source :
+					<a target='_blank' href={planet.owLink}>
+						<StyledWiki>Wikipedia</StyledWiki>
+					</a>
 				</StyledSource>
 				<img
 					src='public/assets/images/icon-source.svg'

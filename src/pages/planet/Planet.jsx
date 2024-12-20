@@ -1,11 +1,11 @@
 import Header from '../../components/header/Header';
 import Main from '../../components/main/Main';
 
-const PlanetPage = () => {
+const PlanetPage = ({ planet }) => {
 	return (
 		<>
 			<Header />
-			<Main></Main>
+			<Main planet={planet}></Main>
 		</>
 	);
 };

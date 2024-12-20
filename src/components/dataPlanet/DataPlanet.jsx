@@ -5,24 +5,24 @@ import {
 	StyledTitle
 } from './dataPlanet.styles';
 
-const DataPlanet = () => {
+const DataPlanet = ({ planet }) => {
 	return (
 		<StyledContainer>
 			<StyledDataBox>
 				<StyledTitle>ROTATION TIME</StyledTitle>
-				<StyledData>58.6 DAYS</StyledData>
+				<StyledData>{planet.rotation}</StyledData>
 			</StyledDataBox>
 			<StyledDataBox>
 				<StyledTitle>REVOLUTION TIME</StyledTitle>
-				<StyledData> 87.97 DAYS</StyledData>
+				<StyledData> {planet.revolution}</StyledData>
 			</StyledDataBox>
 			<StyledDataBox>
 				<StyledTitle>RADIUS</StyledTitle>
-				<StyledData>2,439.7 KM</StyledData>
+				<StyledData>{planet.radius}</StyledData>
 			</StyledDataBox>
 			<StyledDataBox>
 				<StyledTitle>AVERAGE TEMP.</StyledTitle>
-				<StyledData> 430 ºC</StyledData>
+				<StyledData> {planet.temperature}</StyledData>
 			</StyledDataBox>
 		</StyledContainer>
 	);

@@ -39,10 +39,21 @@ const StyledDataBox = styled.div`
 		flex-direction: column;
 		gap: 6px;
 		align-items: flex-start;
+		justify-content: center;
 		padding-left: 16px;
 		padding-block: 16px;
 		width: 164px;
 		height: 88px;
+	}
+	@media screen and (width>1024px) {
+		flex-direction: column;
+		gap: 6px;
+		align-items: flex-start;
+		justify-content: center;
+		padding-left: 24px;
+		padding-block: 24px;
+		width: 255px;
+		height: 128px;
 	}
 `;
 
@@ -53,6 +64,11 @@ const StyledTitle = styled.span`
 	letter-spacing: 0.73px;
 	opacity: 50%;
 	margin: 0px;
+	@media screen and (width>1024px) {
+		font-size: 11px;
+		letter-spacing: 1px;
+		line-height: 25px;
+	}
 `;
 
 const StyledData = styled.span`
@@ -65,6 +81,10 @@ const StyledData = styled.span`
 	@media screen and (width>768px) {
 		font-size: 24px;
 		letter-spacing: -0.9px;
+	}
+	@media screen and (width>1024px) {
+		font-size: 40px;
+		letter-spacing: -1.5px;
 	}
 `;
 
